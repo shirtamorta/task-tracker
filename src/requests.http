@@ -1,5 +1,18 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=IntelliJ IDEA
+### 1. Получить все задачи (GET)
+GET http://localhost:8080/api/tasks
 
-###
+### 2. Создать новую задачу (POST)
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Купить хлеб",
+  "description": "Срочно, к ужину",
+  "deadline": "2026-11-20"
+}
+
+### 3. Получить задачу по ID (GET)
+GET http://localhost:8080/api/tasks/1
+
+### 4. Удалить задачу (DELETE)
+DELETE http://localhost:8080/api/tasks/1
